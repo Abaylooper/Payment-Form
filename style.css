@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+body {
+    overflow: hidden;
+
+}
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #f1f4f9, #dff1ff );
+}
+section .background {
+    position: absolute;
+    filter: blur(150px);
+}
+section .background:nth-child(1){
+    top: -350px;
+    width: 600px;
+    height: 600px;
+    background: #ff359b;
+}
+section .background:nth-child(2) {
+    bottom: -150px;
+    left: 100px;
+    width: 500px;
+    height: 500px;  
+    background: #fffd87;
+}
+section .background:nth-child(3) {
+bottom: 50px;
+right: 100px;
+    width: 300px;
+    height: 300px;
+    background: #00d2ff;
+}
+.box {
+    position: relative;  
+}
+.box .square {
+    backdrop-filter: blur(15px);
+    position: absolute;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    animation: animate 10s linear infinite ;
+    animation-delay: calc(-1s *var(--i));
+
+}
+@keyframes animate {
+    0%, 100%{
+        transform: translateY(-40px);
+    }
+    50%{
+        transform: translateY(40px);
+    }
+}
+
+.box .square:nth-child(1){
+    top: -50px;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+}
+.box .square:nth-child(2) {
+    top: 150px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+}
+.box .square:nth-child(3) {
+    bottom: 50px;
+    right: -60px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+}
+.box .square:nth-child(4) {
+    bottom: -80px;
+    left: 100px;
+    width: 50px;
+    height: 50px;
+}
+
+.box .square:nth-child(5) {
+    top: -80px;
+    left: 140px;
+    width: 60px;
+    height: 60px;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border:1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+
+}
+form h1 {
+    position: relative;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+.inputBox,button{
+    width: 100%;
+    margin-top: 20px;
+}
+.inputBox input, select,button{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 35px;
+    font-size: 16px;
+    letter-spacing: 1px;
+color: black;
+font-weight: 900;
+}
+form select {
+    width: 100%;
+    max-height: 150px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    overflow-y: scroll;
+}
+form select option{
+    color: black;
+    font-size: 15px;
+    letter-spacing: 2px;
+    pad: 5px;
+
+}
+form input::placeholder {
+    color: black;
+font-weight: 900;
+}
+form button {
+     background: white;
+     cursor: pointer;
+     color: black;
+     margin-bottom: 20px;
+     font-weight: 600;
+     transition: all 0.5s ease-in-out;
+}
+form button:hover{
+background: black;
+    color: white;
+    letter-spacing: 2px;
+}
+.error {
+    color: red;
+    text-align: center;
+    letter-spacing: 2px;
+
+}

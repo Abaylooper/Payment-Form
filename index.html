@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page </title>
+    <link rel="stylesheet" href="./style.css">
+
+
+</head>
+<body>
+<section>
+    <div class="background"></div>
+    <div class="background"></div>
+    <div class="background"></div>
+    <div class="box">
+        <div class="square" style="--i:0"></div>
+        <div class="square" style="--i:1"></div>
+        <div class="square" style="--i:2"></div>
+        <div class="square" style="--i:3"></div>
+        <div class="square" style="--i:4"></div>
+        <div class="container">
+            
+                <form action="#" id="formContainer">
+                <h1>Payment Form</h1>
+                    <div class="inputBox">
+                        <input type="text" name="name" placeholder="Your name" onfocus="clearPlaceholder(this)">
+                    </div>
+
+                    <div class="inputBox">  
+
+                        <select name="bank" id="bank" >
+                             <option value="" disabled selected>Select Bank</option>
+                            <option value="Abay Bank">Abay Bank</option>
+                            <option value="Amhara Bank">Amhara Bank</option>
+                            <option value="Awash Bank">Awash Bank</option>
+                            <option value="Bank Of Abyssinia">Bank Of Abyssinia</option>
+                            <option value="Berhan Bank">Berhan Bank</option>
+                            <option value="Buna bank">Buna bank</option>
+                            <option value="CBE">CBE</option>
+                            <option value="Dashen bank">Dashen bank</option>
+                            <option value="Hibret Bank">Hibret Bank</option>
+                            <option value="Oromia Bank">Oromia Bank</option>
+                        </select>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" id="accountNumber" placeholder="Account Number" >
+                    </div>
+                     <div class="inputBox">
+                        <input type="password" id="secretCode:" placeholder="secret Code" >
+                    </div>
+                    <button type="submit">Submit Payment</button>
+                    <p id="errorMessages" class="error"></p>
+                </form>
+            
+        </div>
+    </div>
+</section>
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
