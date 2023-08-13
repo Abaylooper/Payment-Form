@@ -9,3 +9,5 @@ I have used ./index.html file for the layout of front page
 
 ./script.js for form validation and for give on the front page the random total amount 
 
+
+
