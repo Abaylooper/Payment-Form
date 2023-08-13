@@ -1,49 +1,57 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 
 }
+
 body {
     overflow: hidden;
 
 }
+
 section {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to bottom, #f1f4f9, #dff1ff );
+    background: linear-gradient(to bottom, rgb(210, 214, 219), rgb(210, 214, 219));
 }
+
 section .background {
     position: absolute;
     filter: blur(150px);
 }
-section .background:nth-child(1){
+
+section .background:nth-child(1) {
     top: -350px;
     width: 600px;
     height: 600px;
-    background: #ff359b;
+    background: rgb(19, 41, 63);
 }
+
 section .background:nth-child(2) {
     bottom: -150px;
     left: 100px;
     width: 500px;
-    height: 500px;  
-    background: #fffd87;
+    height: 500px;
+    background: rgb(24, 50, 72);
 }
+
 section .background:nth-child(3) {
-bottom: 50px;
-right: 100px;
+    bottom: 50px;
+    right: 100px;
     width: 300px;
     height: 300px;
-    background: #00d2ff;
+    background: rgb(102, 157, 246);
 }
+
 .box {
-    position: relative;  
+    position: relative;
 }
+
 .box .square {
     backdrop-filter: blur(15px);
     position: absolute;
@@ -53,25 +61,30 @@ right: 100px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     background: rgba(255, 255, 255, 0.2);
     border-radius: 15px;
-    animation: animate 10s linear infinite ;
+    animation: animate 10s linear infinite;
     animation-delay: calc(-1s *var(--i));
 
 }
+
 @keyframes animate {
-    0%, 100%{
+
+    0%,
+    100% {
         transform: translateY(-40px);
     }
-    50%{
+
+    50% {
         transform: translateY(40px);
     }
 }
 
-.box .square:nth-child(1){
+.box .square:nth-child(1) {
     top: -50px;
     right: -60px;
     width: 100px;
     height: 100px;
 }
+
 .box .square:nth-child(2) {
     top: 150px;
     left: -100px;
@@ -79,6 +92,7 @@ right: 100px;
     height: 120px;
     z-index: 2;
 }
+
 .box .square:nth-child(3) {
     bottom: 50px;
     right: -60px;
@@ -86,6 +100,7 @@ right: 100px;
     height: 80px;
     z-index: 2;
 }
+
 .box .square:nth-child(4) {
     bottom: -80px;
     left: 100px;
@@ -110,12 +125,13 @@ right: 100px;
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(5px);
-    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
-    border:1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
 }
+
 form {
     position: relative;
     width: 100%;
@@ -123,19 +139,30 @@ form {
     padding: 40px;
 
 }
+
 form h1 {
     position: relative;
-    color: #fff;
+    color: rgb(102, 157, 246);
     font-size: 24px;
     font-weight: 600;
     letter-spacing: 1px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
-.inputBox,button{
+
+.totalAmount {
+    font-size: 20px;
+    color: white;
+}
+
+.inputBox,
+button {
     width: 100%;
     margin-top: 20px;
 }
-.inputBox input, select,button{
+
+.inputBox input,
+select,
+button {
     width: 100%;
     border: none;
     outline: none;
@@ -148,9 +175,10 @@ form h1 {
     border-radius: 35px;
     font-size: 16px;
     letter-spacing: 1px;
-color: black;
-font-weight: 900;
+    color: black;
+    font-weight: 900;
 }
+
 form select {
     width: 100%;
     max-height: 150px;
@@ -159,30 +187,33 @@ form select {
     border: 1px solid #ccc;
     overflow-y: scroll;
 }
-form select option{
+
+form select option {
     color: black;
     font-size: 15px;
     letter-spacing: 2px;
     pad: 5px;
 
 }
+
 form input::placeholder {
-    color: black;
-font-weight: 900;
+    color: rgb(210, 214, 219);
+    font-weight: 900;
 }
+
 form button {
-     background: white;
-     cursor: pointer;
-     color: black;
-     margin-bottom: 20px;
-     font-weight: 600;
-     transition: all 0.5s ease-in-out;
+    background: rgb(102, 157, 246);
+    cursor: pointer;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
 }
-form button:hover{
-background: black;
-    color: white;
+
+form button:hover {
     letter-spacing: 2px;
 }
+
 .error {
     color: red;
     text-align: center;

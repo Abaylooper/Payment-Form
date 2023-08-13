@@ -1,3 +1,13 @@
+
+// Since 6the total amount differs many of the time that's why I am using this value using random number
+const amount = document.querySelector(".totalAmount span");
+let value;
+value = Math.random() * 1000;
+value = Math.floor(value)
+amount.textContent = `${value} ETB`;
+
+// form validation 
+
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('formContainer');
     const errorMessages = document.getElementById('errorMessages');
@@ -27,12 +37,16 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
         if (secretCodeInput.value.trim() === "") {
-            errorMessages.textContent= "Please enter your sectet code"
+            errorMessages.textContent = "Please enter your sectet code"
             return;
 
         }
         form.submit();
         
-})
+    })
 
-})
+});
+
+
+
+
